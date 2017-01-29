@@ -16,11 +16,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-h1, h2, h3, .navbar-default .navbar-nav > li > a {
+/* Typography Styles -- alternative h1, h2, h3, .navbar-default .navbar-nav > li > a */
+body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
+/* Background Gradient */
 .navbar, .home-callout{
   /* GRadient provided by @_ighosh at uiGradients.com */
   background: #000000; /* fallback for old browsers */
@@ -32,22 +33,13 @@ h1, h2, h3, .navbar-default .navbar-nav > li > a {
   border: none;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
   color: #1db992;
-}
-
-.navbar-default .navbar-nav > li > a{
-  color: #1db992;
-}
-
-.navbar-default .navbar-brand:hover {
-  color: #1db992;
-  opacity: 0.5;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: #1db992;
-  opacity: 0.5;
+  /* below nesting only works with sass */
+  &:hover {
+    color: #1db992;
+    opacity: 0.5;
+  }
 }
 
 .home-callout {
