@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+   <div class="col-md-6 col-md-offset-3">
   <head>
     <title>Saasapp</title>
     <%= csrf_meta_tags %>
@@ -9,6 +10,7 @@
   </head>
 
   <body>
+   
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class='container'>
         <div class="navbar-header">
@@ -20,15 +22,17 @@
           </button>
           <%= link_to root_path, class: "navbar-brand" do%>
             <i class="fa fa-book"></i>
-            Yin&Yang Cooking
+            Ying&Yang Cooking
           <% end %>
         </div>
+        <div class="col-md-2 col-md-offset-5">
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Contact Us", new_contact_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
+        </div>
       </div>
     </nav>
     
@@ -36,9 +40,11 @@
       <% flash.each do |type, msg| %>
        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
       <% end %>
-    </div>
+   
 
     <%= yield %>
 
+    </div>
   </body>
+  </div>
 </html>
